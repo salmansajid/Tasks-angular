@@ -4,13 +4,15 @@ This project is created to judge your angular skills.
 
 ### Task # 1
 
-Please download the source code from following location and have it up and running on your local machine. Run it using the url http://localhost:4200/
-
-Hint : If you have done it before, it should be easy and straight forward. its pretty standard. Just follow the standard process to have an angular application up and running.
+Please download the source code from following location and have it up and running on your local machine.
 
 ```
 https://github.com/risenrun/virtualcms.git
 ```
+
+Run it using the url http://localhost:4200/
+
+Hint : If you have done it before, it should be easy and straight forward. its pretty standard. Just follow the standard process to have an angular application up and running.
 
 ### Task # 2
 
