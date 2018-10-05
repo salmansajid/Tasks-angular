@@ -1,0 +1,33 @@
+{
+    "customers": [{
+            "firstName": "Shawn",
+            "lastName": "William",
+            "code": "1111"
+
+        },
+        {
+            "firstName": "Kevin",
+            "lastName": "Bom",
+            "code": "2222"
+
+        },
+        {
+            "firstName": "Lucas",
+            "lastName": "Kraus",
+            "code": "3333"
+
+        },
+        {
+            "firstName": "Alexy",
+            "lastName": "Chen",
+            "code": "4444"
+
+        },
+        {
+            "firstName": "Frank",
+            "lastName": "Snatra",
+            "code": "5555"
+
+        }
+    ]
+}
