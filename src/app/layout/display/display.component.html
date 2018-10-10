@@ -1,3 +1,62 @@
-<div>
+<div class="mt-4">
     <h2 class="text-muted">{{ heading }}</h2>
+</div>
+<div class="mt-4" *ngIf="isDetails">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of customer">
+                <td>{{ x.firstName }}</td>
+                <td>{{ x.lastName }}</td>
+                <td>{{ x.code }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="mt-4" *ngIf="isInfo">
+    <form name="form" class="row" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" maxlength="50"
+                    #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                    <div *ngIf="firstName.errors.required">First Name is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" maxlength="50"
+                    #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                    <div *ngIf="lastName.errors.required">Last Name is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="form-group">
+                <label>Code</label>
+                <input type="number" class="form-control" name="code" [(ngModel)]="model.code" min="1" max="10"
+                     #code="ngModel" [ngClass]="{ 'is-invalid': f.submitted && code.invalid }" required />
+                <div *ngIf="f.submitted && code.invalid" class="invalid-feedback">
+                    <div *ngIf="code.errors.required">Code is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="form-group mt-4">
+                <button class="btn btn-primary mt-2" >Submit</button>
+                <!-- [disabled]="!model.firstName || !model.lastName || !model.code" -->
+            </div>
+        </div>
+    </form>
 </div>

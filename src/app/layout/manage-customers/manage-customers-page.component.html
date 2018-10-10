@@ -1,15 +1,21 @@
-<div>
+<div class="row mt-4">
     <h2 class="text-muted">Manage
         <small>Customer</small>
     </h2>
-    <div class="row">
-        <ul class="menu-bar">
-            <li class="menu-bar-item">
-                <a class="header-button" [routerLink]="['display','Customer Detail']" [routerLinkActive]="['router-link-active']">
-                    <i class="fa fa-server fa-3x"></i>
-                    <p class="header-button-text">Customer Details</p>
-                </a>
-            </li>
-        </ul>
-    </div>
+</div>
+<div class="row">
+    <ul class="menu-bar display-inline">
+        <li class="menu-bar-item">
+            <a class="header-button" [routerLink]="['display','Customer Detail']" [routerLinkActive]="['router-link-active']">
+                <i class="fa fa-server fa-3x"></i>
+                <p class="header-button-text">Customer Details</p>
+            </a>
+        </li>
+        <li class="menu-bar-item">
+            <a class="header-button" [routerLink]="['display','Customer Information']" [routerLinkActive]="['router-link-active']">
+                <i class="fa fa-info fa-3x"></i>
+                <p class="header-button-text">Customer Information</p>
+            </a>
+        </li>
+    </ul>
 </div>

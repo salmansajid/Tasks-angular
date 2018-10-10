@@ -7,17 +7,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
+import { DisplayService } from './layout/display/display.service';
+import { LayoutModule } from './layout/layout.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
     imports: [
+        LayoutModule,
         CommonModule,
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule
     ],
     declarations: [AppComponent],
-    providers: [AuthGuard],
+    providers: [AuthGuard, DisplayService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

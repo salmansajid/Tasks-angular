@@ -1,4 +1,4 @@
-# A virtual Customer Management System
+# A virtual Customer Management System.
 
 This project is created to judge your angular skills.
 

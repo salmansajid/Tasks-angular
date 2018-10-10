@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ManageCurstomerPageComponent } from './manage-customers-page.component';
 import { DisplayComponent } from '../display/display.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
     {
@@ -15,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
+    imports: [CommonModule, FormsModule, RouterModule.forChild(routes)],
     declarations: [DisplayComponent],
     exports: [RouterModule]
 })
